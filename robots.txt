@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nisongmonyimba.github.io/news-ministry/sitemap.xml
