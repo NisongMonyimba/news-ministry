@@ -3,7 +3,9 @@
   function setMenu(open) { if (!menu || !button) return; menu.hidden = !open; button.setAttribute('aria-expanded', String(open)); button.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation'); }
   button?.addEventListener('click', () => setMenu(button.getAttribute('aria-expanded') !== 'true'));
   menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && button?.getAttribute('aria-expanded') === 'true') { setMenu(false); button.focus(); } });
+  document.addEventListener('click', e => { if (button?.getAttribute('aria-expanded') === 'true' && !button.contains(e.target) && !menu.contains(e.target)) setMenu(false); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 860) setMenu(false); });
   const toggle = document.getElementById('lyricsToggle'), lyrics = document.getElementById('fullLyrics');
   toggle?.addEventListener('click', () => { const expanded = toggle.getAttribute('aria-expanded') !== 'true'; lyrics.hidden = !expanded; toggle.setAttribute('aria-expanded',String(expanded)); toggle.textContent = expanded ? 'Hide full song lyrics ↑' : 'Read full song lyrics ↓'; });
   const toast = document.getElementById('toast'); let timer;
