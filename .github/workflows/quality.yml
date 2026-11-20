@@ -1,0 +1,24 @@
+name: Site quality
+
+on:
+  push:
+    branches: [main, audit/production-readiness]
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build resource catalog and sitemap
+        run: npm run build
+      - name: Validate committed generated files
+        run: git diff --exit-code -- index.html sitemap.xml
+      - name: Run site tests
+        run: npm test
