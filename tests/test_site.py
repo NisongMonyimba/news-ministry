@@ -148,7 +148,7 @@ class SiteQualityTests(unittest.TestCase):
         self.assertIn(f"{len(catalog)} PUBLISHED RESOURCES", home)
         tree = ElementTree.parse(ROOT / "sitemap.xml")
         urls = {node.text for node in tree.findall(".//{*}loc")}
-        expected = {BASE} | {BASE + entry["url"].split("#")[0] for entry in catalog if not entry["url"].startswith("#")}
+        expected = {BASE, BASE + "gospel.html"} | {BASE + entry["url"] for entry in catalog}
         self.assertEqual(urls, expected)
         robots = (ROOT / "robots.txt").read_text()
         self.assertIn(BASE + "sitemap.xml", robots)

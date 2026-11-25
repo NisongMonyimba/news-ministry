@@ -1,11 +1,11 @@
 [
   {
-    "id": "bible-no-ordinary-book",
+    "id": "message-001",
     "kind": "sermon",
     "label": "MESSAGE 001 · SCRIPTURE",
     "title": "The Bible Is No Ordinary Book",
     "summary": "A reflection on the living Word and the transforming power of divine revelation.",
-    "url": "#message",
+    "url": "publications/message-001/",
     "image": "assets/ministry-logo.webp",
     "imageAlt": "NEWS crest and ancient Bible",
     "imageWidth": 900,
@@ -13,12 +13,12 @@
     "action": "Read and listen"
   },
   {
-    "id": "gospel-from-christ",
+    "id": "message-002",
     "kind": "publication",
     "label": "MESSAGE 002 · GALATIANS 1:11-12",
     "title": "Is the Gospel You Hear From Man or From Christ?",
     "summary": "Listen to the sermon, explore the full essay, study the Scriptures and download the publication.",
-    "url": "gospel.html",
+    "url": "publications/message-002/",
     "image": "assets/gospel-study-cover.webp",
     "imageAlt": "NEWS Bible study publication cover",
     "imageWidth": 1034,
@@ -26,12 +26,12 @@
     "action": "Explore the Bible study"
   },
   {
-    "id": "word-is-alive-lyrics",
+    "id": "song-001",
     "kind": "song",
     "label": "SONG 001 · ORIGINAL LYRICS",
     "title": "The Word Is Alive",
     "summary": "Read the original worship lyrics and arrangement concept. A recording has not yet been produced.",
-    "url": "#worship",
+    "url": "publications/song-001/",
     "action": "Read the lyrics"
   }
 ]

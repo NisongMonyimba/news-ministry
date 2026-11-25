@@ -1,0 +1,12 @@
+{
+  "id": "message-003",
+  "number": "MESSAGE 003",
+  "kind": "sermon",
+  "title": "Replace with approved title",
+  "summary": "Replace with approved summary",
+  "status": "draft",
+  "approved": false,
+  "url": "publications/message-003/",
+  "categories": [],
+  "topics": []
+}
