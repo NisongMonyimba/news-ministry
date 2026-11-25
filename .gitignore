@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+.news-private/
+content/drafts/
+preview/

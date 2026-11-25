@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node tools/build.mjs",
-    "test": "python3 -m unittest discover -s tests -v"
+    "test": "python3 -m unittest discover -s tests -v",
+    "publish": "node tools/publish.mjs"
   }
 }

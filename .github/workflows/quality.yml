@@ -2,7 +2,7 @@ name: Site quality
 
 on:
   push:
-    branches: [main, audit/production-readiness]
+    branches: [main, feature/digital-publishing-system-v1]
   pull_request:
 
 jobs:
@@ -16,9 +16,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Build resource catalog and sitemap
+      - name: Build publication pages, catalog and sitemap
         run: npm run build
       - name: Validate committed generated files
-        run: git diff --exit-code -- index.html sitemap.xml
+        run: git diff --exit-code -- index.html sitemap.xml content/catalog.json publications
       - name: Run site tests
         run: npm test

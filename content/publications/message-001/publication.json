@@ -1,0 +1,20 @@
+{
+  "id": "message-001",
+  "number": "MESSAGE 001",
+  "kind": "sermon",
+  "label": "MESSAGE 001 · SCRIPTURE",
+  "title": "The Bible Is No Ordinary Book",
+  "summary": "A reflection on the living Word and the transforming power of divine revelation.",
+  "action": "Read and listen",
+  "status": "published",
+  "approved": true,
+  "url": "publications/message-001/",
+  "categories": ["Christian message"],
+  "topics": ["Scripture", "revelation"],
+  "artwork": {"path": "assets/ministry-logo.webp", "alt": "NEWS crest and ancient Bible", "width": 900, "height": 900},
+  "writtenMessage": "content/publications/message-001/written.html",
+  "audio": ["assets/original-message.mp3"],
+  "sourceNote": "Original recorded sample. The approved written reflection is expanded from the spoken material.",
+  "related": ["message-002"],
+  "legacyUrl": "#message"
+}

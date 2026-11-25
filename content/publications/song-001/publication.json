@@ -1,0 +1,17 @@
+{
+  "id": "song-001",
+  "number": "SONG 001",
+  "kind": "song",
+  "label": "SONG 001 · ORIGINAL LYRICS",
+  "title": "The Word Is Alive",
+  "summary": "Read the original worship lyrics and arrangement concept. A recording has not yet been produced.",
+  "action": "Read the lyrics",
+  "status": "published",
+  "approved": true,
+  "url": "publications/song-001/",
+  "categories": ["Worship"],
+  "topics": ["Scripture", "transformation"],
+  "lyrics": "content/publications/song-001/lyrics.html",
+  "related": ["message-001"],
+  "legacyUrl": "#worship"
+}
