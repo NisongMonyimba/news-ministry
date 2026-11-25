@@ -159,6 +159,13 @@ class PublicationTests(unittest.TestCase):
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("duplicate ID, URL, or number", result.stderr)
             shutil.rmtree(duplicate_dir)
+            announcement_file = announcements / "upcoming-teaching.json"
+            announcement = json.loads(announcement_file.read_text())
+            announcement_file.write_text(json.dumps(dict(announcement, status="draft")))
+            result = build()
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("Invalid approved upcoming teaching announcement", result.stderr)
+            announcement_file.write_text(json.dumps(announcement))
             shutil.rmtree(directory)
             result = build()
             self.assertEqual(result.returncode, 0, result.stderr)
